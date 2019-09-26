@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { UsersModule } from './users/users.module';
 import { GraphQLModule } from '@nestjs/graphql';
+import { UsersModule } from './users/users.module';
+import { TasksModule } from './tasks/tasks.module';
 
 @Module({
   imports: [
@@ -14,7 +15,8 @@ import { GraphQLModule } from '@nestjs/graphql';
       useNewUrlParser: true,
       useUnifiedTopology: true
     }),
-    UsersModule
+    UsersModule,
+    TasksModule
   ],
   providers: [],
 })

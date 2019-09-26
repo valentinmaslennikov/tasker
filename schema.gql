@@ -5,10 +5,22 @@
 
 type Mutation {
   createUser(input: UserInput!): UserDto!
+  createTask(input: TaskInput!): TaskDto!
 }
 
 type Query {
   getUsers: [UserDto!]!
+  getTasks: [TaskDto!]!
+}
+
+type TaskDto {
+  title: String!
+  description: String!
+}
+
+input TaskInput {
+  title: String!
+  description: String!
 }
 
 type UserDto {
